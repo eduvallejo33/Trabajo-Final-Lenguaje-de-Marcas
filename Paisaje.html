@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisaje</title>
+    <style>
+        #porta {
+            object-position: center;
+            width: 100%;
+            height: auto;
+            margin: auto;
+            display: block;
+        }
+        #foto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and (orientation:landscape) {
+            #porta {
+                max-width: 1200px;
+                max-height: 800px;
+            }
+        }
+        @media screen and (orientation:portrait) {
+            #porta {
+                max-width: 600px;
+                max-height: 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <picture id="porta">
+        <source media="(orientation: portrait) and (min-width:601px)" srcset="Foto1.1080x1350.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width:601px)" srcset="Foto1.1080x1350.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width:601px)" srcset="Foto1.1080x1350.jpg" type="image/jpg">
+        <source media="(orientation: portrait) and (max-width:600px)" srcset="Foto1.600x900.heic" type="image/heic">
+        <source media="(orientation: portrait) and (max-width:600px)" srcset="Foto1.600x900.webp" type="image/webp">
+        <source media="(orientation: portrait) and (max-width:600px)" srcset="Foto1.600x900.jpg" type="image/jpeg"> 
+
+        <source media="(orientation: landscape) and (min-width:801px)" srcset="Foto1.1920x1280.heic" type="image/heic">
+        <source media="(orientation: landscape) and (min-width:801px)" srcset="Foto1.1920x1280.webp" type="image/webp">
+        <source media="(orientation: landscape) and (min-width:801px)" srcset="Foto1.1920x1280.jpg" type="image/jpeg">
+        <source media="(orientation: landscape) and (max-width:800px)" srcset="Foto1.800x533.heic" type="image/heic">
+        <source media="(orientation: landscape) and (max-width:800px)" srcset="Foto1.800x533.webp" type="image/webp">
+        <source media="(orientation: landscape) and (max-width:800px)" srcset="Foto1.800x533.jpg" type="image/jpeg">
+
+       
+        <img id="foto" alt="Paisaje" title="Paisaje" src="Foto1.1920x1280.jpg"/>
+    </picture>
+</body>
+</html>
